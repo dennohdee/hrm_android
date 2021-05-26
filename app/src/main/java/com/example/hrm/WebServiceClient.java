@@ -13,7 +13,7 @@ public class WebServiceClient {
                 .setLevel(HttpLoggingInterceptor.Level.BODY)).build();
 
         return new Retrofit.Builder()
-                .baseUrl("http://192.168.8.101:8000/")
+                .baseUrl("http://192.168.8.101:8000/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
