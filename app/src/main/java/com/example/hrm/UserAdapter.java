@@ -36,7 +36,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserViewHolder> {
         User user = userList.get(position);
         holder.setEmail(user.getEmail());
         holder.setName(user.getName());
-        holder.setDate(user.getDate());
+//        holder.setDate(user.getDate());
     }
 
     @Override

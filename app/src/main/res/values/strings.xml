@@ -3,4 +3,9 @@
     <string name="string_name">User Name</string>
     <string name="string_email">User@example.mail</string>
     <string name="string_date">Tue</string>
+    <string name="string_about">Simple HRM app is a basic android application that can do REST API calls,
+    CRUD local data using Room library, and has a navigation drawer which is accessible by swiping from left.</string>
+    <!-- Used in NavigationDrawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

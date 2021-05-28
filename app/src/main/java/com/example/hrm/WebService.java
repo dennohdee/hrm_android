@@ -11,4 +11,6 @@ interface WebService {
     @GET("users/get_all")
     Call<UserData> getUserData();
 
+    @DELETE("/users/delete/{id}")
+    Call<Delete> deletePost(@Path("id") long id);
 }
