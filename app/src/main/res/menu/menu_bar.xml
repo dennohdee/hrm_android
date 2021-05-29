@@ -8,7 +8,7 @@
         app:showAsAction="always" />
     <item
         android:id="@+id/action_show_menu"
-        android:icon="@android:drawable/menu_frame"
+        android:icon="@drawable/outline_toc_24"
         android:title="Show Menu"
         app:showAsAction="always" />
 </menu>

@@ -181,6 +181,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
                 break;
             case R.id.activity_main_drawer_profile:
+                setContentView(R.layout.room_user);
+                // Configure all views
+
+                //  configureTool//  Bar();
+                configureDrawerLayout();
+
+                configureNavigationView();
+
+                //create user process
+                final EditText nameEt = (EditText) findViewById(R.id.user_room_txt_name);
+                Button submitBtn = (Button) findViewById(R.id.user_room_submit);
+                mResponseTv = (TextView) findViewById(R.id.user_room_response);
+
+
+
+                submitBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        String name = nameEt.getText().toString().trim();
+                        if(!TextUtils.isEmpty(name)) {
+                            mResponseTv.setVisibility(View.VISIBLE);
+                            mResponseTv.setText("Added "+name);
+//                            roomSend(name);
+                        }
+                    }
+                });
+
                 break;
             case R.id.activity_main_drawer_settings:
                 setContentView(R.layout.activity_about);
@@ -200,7 +227,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         return true;
     }
-
+    //room send
+    public void roomSend(String name){
+        UserRoomDatabase appDb = UserRoomDatabase.getInstance(getApplicationContext());
+        UserRoom user = new UserRoom(name);
+        appDb.userRoomDao.insertUserRoom(user);
+    }
     // Configure Toolbar
     private void configureToolBar(){
         this.toolbar = (Toolbar) findViewById(R.id.activity_main_toolbar);
